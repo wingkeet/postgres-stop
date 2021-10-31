@@ -10,7 +10,7 @@ All of the work done here have been tested on Ubuntu 20.04 LTS and PostgreSQL 12
 ### Installation
 ```
 $ sudo apt-get update
-$ sudo apt-get install postgresql postgresql-contrib
+$ sudo apt-get install -y postgresql postgresql-contrib
 ```
 
 ### Get into the psql interactive shell
