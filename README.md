@@ -7,6 +7,12 @@ The goal of this repository is to provide a resource center for learning Postgre
 ### Prerequisites
 All of the work done here have been tested on Ubuntu 20.04 LTS and PostgreSQL 12.8.
 
+### Installation
+```
+$ sudo apt-get update
+$ sudo apt-get install postgresql postgresql-contrib
+```
+
 ### References
 - [PostgreSQL Home](https://www.postgresql.org/)
 - [How To Install PostgreSQL on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-install-postgresql-on-ubuntu-20-04-quickstart)
