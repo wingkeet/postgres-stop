@@ -31,9 +31,9 @@ $ getent passwd | grep postgres
 postgres:x:127:134:PostgreSQL administrator,,,:/var/lib/postgresql:/bin/bash
 ```
 
-### Where is the data directory
+### Location of data directory
 ```
-$ sudo -i -u postgres
+wingkeet@nuc2:~$ sudo -i -u postgres
 postgres@nuc2:~$ pwd
 /var/lib/postgresql
 postgres@nuc2:~$ cd 12/main
@@ -60,6 +60,21 @@ drwx------ 2 postgres postgres 4096 Oct 31 15:00 pg_xact/
 -rw------- 1 postgres postgres   88 Oct 31 15:00 postgresql.auto.conf
 -rw------- 1 postgres postgres  130 Oct 31 20:08 postmaster.opts
 -rw------- 1 postgres postgres  107 Oct 31 20:08 postmaster.pid
+```
+
+### Location of configuration files
+```
+wingkeet@nuc2:~$ sudo -i -u postgres
+postgres@nuc2:~$ cd /etc/postgresql/12/main
+postgres@nuc2:/etc/postgresql/12/main$ ls -AlF
+total 56
+drwxr-xr-x 2 postgres postgres  4096 Oct 31 15:00 conf.d/
+-rw-r--r-- 1 postgres postgres   315 Oct 31 15:00 environment
+-rw-r--r-- 1 postgres postgres   143 Oct 31 15:00 pg_ctl.conf
+-rw-r----- 1 postgres postgres  4933 Oct 31 15:00 pg_hba.conf
+-rw-r----- 1 postgres postgres  1636 Oct 31 15:00 pg_ident.conf
+-rw-r--r-- 1 postgres postgres 26928 Oct 31 15:00 postgresql.conf
+-rw-r--r-- 1 postgres postgres   317 Oct 31 15:00 start.conf
 ```
 
 ### References
