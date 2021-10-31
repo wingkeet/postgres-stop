@@ -25,7 +25,7 @@ postgres=# \conninfo
 You are connected to database "postgres" as user "postgres" via socket in "/var/run/postgresql" at port "5432".
 ```
 
-Home directory of the postgres user
+### Home directory of the postgres user
 ```
 $ getent passwd | grep postgres
 postgres:x:127:134:PostgreSQL administrator,,,:/var/lib/postgresql:/bin/bash
