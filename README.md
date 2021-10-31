@@ -21,6 +21,8 @@ Type "help" for help.
 
 postgres=# \c
 You are now connected to database "postgres" as user "postgres".
+postgres=# \conninfo
+You are connected to database "postgres" as user "postgres" via socket in "/var/run/postgresql" at port "5432".
 ```
 
 ### References
