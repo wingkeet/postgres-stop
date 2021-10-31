@@ -77,6 +77,14 @@ drwxr-xr-x 2 postgres postgres  4096 Oct 31 15:00 conf.d/
 -rw-r--r-- 1 postgres postgres   317 Oct 31 15:00 start.conf
 ```
 
+### Location of log files
+```
+wingkeet@nuc2:~$ cd /var/log/postgresql
+wingkeet@nuc2:/var/log/postgresql$ ls -AlF
+total 4
+-rw-r----- 1 postgres adm 4043 Oct 31 21:23 postgresql-12-main.log
+```
+
 ### References
 - [PostgreSQL Home](https://www.postgresql.org/)
 - [How To Install PostgreSQL on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-install-postgresql-on-ubuntu-20-04-quickstart)
