@@ -32,6 +32,18 @@ postgres:x:127:134:PostgreSQL administrator,,,:/var/lib/postgresql:/bin/bash
 ```
 
 ### Where are the PostgreSQL files?
+```
+postgres=# SELECT name, setting FROM pg_settings WHERE category = 'File Locations';
+       name        |                 setting                 
+-------------------+-----------------------------------------
+ config_file       | /etc/postgresql/12/main/postgresql.conf
+ data_directory    | /var/lib/postgresql/12/main
+ external_pid_file | /var/run/postgresql/12-main.pid
+ hba_file          | /etc/postgresql/12/main/pg_hba.conf
+ ident_file        | /etc/postgresql/12/main/pg_ident.conf
+(5 rows)
+```
+The following are the default file locations on Debian or Ubuntu systems:
 
 | Location                      | Description         |
 | ----------------------------- | ------------------- |
