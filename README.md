@@ -27,63 +27,17 @@ You are connected to database "postgres" as user "postgres" via socket in "/var/
 
 ### Home directory of the postgres user
 ```
-$ getent passwd | grep postgres
+$ getent passwd postgres
 postgres:x:127:134:PostgreSQL administrator,,,:/var/lib/postgresql:/bin/bash
 ```
 
-### Location of data directory
-```
-wingkeet@nuc2:~$ sudo -i -u postgres
-postgres@nuc2:~$ pwd
-/var/lib/postgresql
-postgres@nuc2:~$ cd 12/main
-postgres@nuc2:~/12/main$ ls -AlF
-total 84
-drwx------ 5 postgres postgres 4096 Oct 31 15:00 base/
-drwx------ 2 postgres postgres 4096 Oct 31 20:56 global/
-drwx------ 2 postgres postgres 4096 Oct 31 15:00 pg_commit_ts/
-drwx------ 2 postgres postgres 4096 Oct 31 15:00 pg_dynshmem/
-drwx------ 4 postgres postgres 4096 Oct 31 20:13 pg_logical/
-drwx------ 4 postgres postgres 4096 Oct 31 15:00 pg_multixact/
-drwx------ 2 postgres postgres 4096 Oct 31 20:08 pg_notify/
-drwx------ 2 postgres postgres 4096 Oct 31 15:00 pg_replslot/
-drwx------ 2 postgres postgres 4096 Oct 31 15:00 pg_serial/
-drwx------ 2 postgres postgres 4096 Oct 31 15:00 pg_snapshots/
-drwx------ 2 postgres postgres 4096 Oct 31 20:08 pg_stat/
-drwx------ 2 postgres postgres 4096 Oct 31 15:00 pg_stat_tmp/
-drwx------ 2 postgres postgres 4096 Oct 31 15:00 pg_subtrans/
-drwx------ 2 postgres postgres 4096 Oct 31 15:00 pg_tblspc/
-drwx------ 2 postgres postgres 4096 Oct 31 15:00 pg_twophase/
--rw------- 1 postgres postgres    3 Oct 31 15:00 PG_VERSION
-drwx------ 3 postgres postgres 4096 Oct 31 15:00 pg_wal/
-drwx------ 2 postgres postgres 4096 Oct 31 15:00 pg_xact/
--rw------- 1 postgres postgres   88 Oct 31 15:00 postgresql.auto.conf
--rw------- 1 postgres postgres  130 Oct 31 20:08 postmaster.opts
--rw------- 1 postgres postgres  107 Oct 31 20:08 postmaster.pid
-```
+### Where are the PostgreSQL files?
 
-### Location of configuration files
-```
-wingkeet@nuc2:~$ sudo -i -u postgres
-postgres@nuc2:~$ cd /etc/postgresql/12/main
-postgres@nuc2:/etc/postgresql/12/main$ ls -AlF
-total 56
-drwxr-xr-x 2 postgres postgres  4096 Oct 31 15:00 conf.d/
--rw-r--r-- 1 postgres postgres   315 Oct 31 15:00 environment
--rw-r--r-- 1 postgres postgres   143 Oct 31 15:00 pg_ctl.conf
--rw-r----- 1 postgres postgres  4933 Oct 31 15:00 pg_hba.conf
--rw-r----- 1 postgres postgres  1636 Oct 31 15:00 pg_ident.conf
--rw-r--r-- 1 postgres postgres 26928 Oct 31 15:00 postgresql.conf
--rw-r--r-- 1 postgres postgres   317 Oct 31 15:00 start.conf
-```
-
-### Location of log files
-```
-wingkeet@nuc2:~$ cd /var/log/postgresql
-wingkeet@nuc2:/var/log/postgresql$ ls -AlF
-total 4
--rw-r----- 1 postgres adm 4043 Oct 31 21:23 postgresql-12-main.log
-```
+| Location                      | Description         |
+| ----------------------------- | ------------------- |
+| `/etc/postgresql/12/main`     | Configuration files |
+| `/var/lib/postgresql/12/main` | Data directory      |
+| `/var/log/postgresql`         | Log files           |
 
 ### References
 - [PostgreSQL Home](https://www.postgresql.org/)
