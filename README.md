@@ -13,6 +13,12 @@ $ sudo apt-get update
 $ sudo apt-get install -y postgresql postgresql-contrib
 ```
 
+### Home directory of the postgres user
+```
+$ getent passwd postgres
+postgres:x:127:134:PostgreSQL administrator,,,:/var/lib/postgresql:/bin/bash
+```
+
 ### Get into the psql interactive shell
 ```
 $ sudo -u postgres psql
@@ -23,12 +29,6 @@ postgres=# \c
 You are now connected to database "postgres" as user "postgres".
 postgres=# \conninfo
 You are connected to database "postgres" as user "postgres" via socket in "/var/run/postgresql" at port "5432".
-```
-
-### Home directory of the postgres user
-```
-$ getent passwd postgres
-postgres:x:127:134:PostgreSQL administrator,,,:/var/lib/postgresql:/bin/bash
 ```
 
 ### Where are the PostgreSQL files?
